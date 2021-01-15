@@ -1,0 +1,20 @@
+﻿Custom UI
+
+
+winexe
+C#
+.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\
+Custom_UI
+none
+false
+DEBUG;TRACE
+D:\repos\open-serial-port-monitor\src\Custom UI\App.xaml
+4676994499
+
+21378957756
+71-474188765
+Views\AboutView.xaml;Views\MainView.xaml;Views\SerialConnectorView.xaml;Views\SerialDataSendView.xaml;
+
+False
+

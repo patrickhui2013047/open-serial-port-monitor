@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialCommunication", "SerialCommunication\SerialCommunication.csproj", "{2C6554FA-1519-4BA7-9E19-9C1C0E4C8128}"
 EndProject
@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D61E81
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Custom UI", "Custom UI\Custom UI.csproj", "{6DC4EB1F-0B76-404F-86BF-8D0C770BA18C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,8 +30,15 @@ Global
 		{AF5E38E8-B886-4F41-BA7E-2B209CF43515}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF5E38E8-B886-4F41-BA7E-2B209CF43515}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF5E38E8-B886-4F41-BA7E-2B209CF43515}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DC4EB1F-0B76-404F-86BF-8D0C770BA18C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DC4EB1F-0B76-404F-86BF-8D0C770BA18C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DC4EB1F-0B76-404F-86BF-8D0C770BA18C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DC4EB1F-0B76-404F-86BF-8D0C770BA18C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74F356F6-411F-4918-B48B-0FC9FC77FC83}
 	EndGlobalSection
 EndGlobal

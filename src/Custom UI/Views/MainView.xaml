@@ -1,0 +1,39 @@
+﻿<Window x:Class="Custom_UI.Views.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Serial Monior" Height="600" Width="800">
+    <Grid Background="#FF2A3A56">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="#FFd6dbe9">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Exit" x:Name="FileExit"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_View">
+                <MenuItem Header="_Autoscroll" x:Name="Autoscroll" IsCheckable="True" IsChecked="true"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" x:Name="OpenAbout"></MenuItem>
+            </MenuItem>
+
+
+        </Menu>
+        
+        <ContentControl x:Name="SerialConnectorView" Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Margin="5" VerticalAlignment="Top"/>
+        <ContentControl x:Name="IncomingDataView" Grid.Column="1" Grid.Row="1" Margin="0,5,5,5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+        <ContentControl x:Name="OutcomingDataView" Grid.Column="1" Grid.Row="2" Margin="0,5,5,5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+        <ContentControl x:Name="SerialDataSendView" Grid.Column="1" Grid.Row="3" Margin="0,0,5,5" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" />
+    </Grid>
+</Window>

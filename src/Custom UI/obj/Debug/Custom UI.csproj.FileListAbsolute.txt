@@ -1,0 +1,36 @@
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Custom UI.exe.config
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Custom UI.exe
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Custom UI.pdb
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.csprojAssemblyReference.cache
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\App.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI_MarkupCompile.cache
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.g.resources
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom_UI.Properties.Resources.resources
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.csproj.GenerateResource.cache
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.csproj.CoreCompileInputs.cache
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.exe
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.pdb
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\MainView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialConnectorView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\MainView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialConnectorView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\AboutView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\AboutView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Microsoft.Expression.Interactions.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\OpenSerialPortMonitor.exe
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\SerialCommunication.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Windows.Interactivity.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\OpenSerialPortMonitor.pdb
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\OpenSerialPortMonitor.exe.config
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\SerialCommunication.pdb
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Microsoft.Expression.Interactions.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Windows.Interactivity.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataSendView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI_MarkupCompile.lref
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataSendView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.csproj.CopyComplete
