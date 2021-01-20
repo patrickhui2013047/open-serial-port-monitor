@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Custom_UI.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Custom_UI.Views
         public MainView()
         {
             InitializeComponent();
+            
         }
     }
 }

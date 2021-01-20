@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\repos\open-serial-port-monitor\src\Custom UI\App.xaml
-4676994499
+5231517310
 
-21378957756
-71-474188765
-Views\AboutView.xaml;Views\MainView.xaml;Views\SerialConnectorView.xaml;Views\SerialDataSendView.xaml;
+231908560089
+70575352210
+Views\AboutView.xaml;Views\MainView.xaml;Views\SerialConnectorView.xaml;Views\SerialDataSendView.xaml;Views\SerialDataView.xaml;
 
 False
 

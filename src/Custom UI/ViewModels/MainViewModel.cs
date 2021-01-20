@@ -7,8 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Custom_UI.ViewModels;
 //TODO:replace
-using Whitestone.OpenSerialPortMonitor.Main.Framework;
-using Whitestone.OpenSerialPortMonitor.Main.Messages;
+using Custom_UI.Framework;
+using Custom_UI.Messages;
 using System.Windows;
 
 namespace Custom_UI.ViewModels
@@ -35,8 +35,8 @@ namespace Custom_UI.ViewModels
             }
         }
 
-        private Whitestone.OpenSerialPortMonitor.Main.ViewModels.SerialDataViewModel _serialDataView;
-        public Whitestone.OpenSerialPortMonitor.Main.ViewModels.SerialDataViewModel SerialDataView
+        private SerialDataViewModel _serialDataView;
+        public SerialDataViewModel SerialDataView
         {
             get
             {
@@ -75,7 +75,7 @@ namespace Custom_UI.ViewModels
         protected override void OnInitialize()
         {
             SerialConnectorView = new SerialConnectorViewModel(_eventAggregator);
-            SerialDataView = new Whitestone.OpenSerialPortMonitor.Main.ViewModels.SerialDataViewModel(_eventAggregator);
+            SerialDataView = new SerialDataViewModel(_eventAggregator);
             SerialDataSendView = new SerialDataSendViewModel(_eventAggregator);
             base.OnInitialize();
         }

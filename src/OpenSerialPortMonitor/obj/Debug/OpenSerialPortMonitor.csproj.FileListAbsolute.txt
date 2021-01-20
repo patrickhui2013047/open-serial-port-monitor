@@ -48,16 +48,6 @@ D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\SerialComm
 D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\SerialCommunication.pdb
 D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\Caliburn.Micro.xml
 D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\Caliburn.Micro.Platform.xml
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\de\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\en\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\es\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\fr\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\it\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\ja\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\ko\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\ru\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
-D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
 D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\obj\Debug\OpenSerialPortMonitor.csprojAssemblyReference.cache
 D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\obj\Debug\Views\AboutView.baml
 D:\repos\open-serial-port-monitor\src\OpenSerialPortMonitor\obj\Debug\Views\MainView.baml

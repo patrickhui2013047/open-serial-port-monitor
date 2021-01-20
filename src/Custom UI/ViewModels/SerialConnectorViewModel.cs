@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Caliburn.Micro;
 using Whitestone.OpenSerialPortMonitor.SerialCommunication;
-using Whitestone.OpenSerialPortMonitor.Main.Messages;
+using Custom_UI.Messages;
 using System.IO.Ports;
 using System.Windows;
 

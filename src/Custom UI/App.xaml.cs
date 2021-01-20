@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Custom_UI.Framework;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,10 @@ namespace Custom_UI
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            InitializeComponent();
+ 
+        }
     }
 }

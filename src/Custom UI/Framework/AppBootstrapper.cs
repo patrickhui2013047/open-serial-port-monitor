@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using Whitestone.OpenSerialPortMonitor.Main.Framework;
+using Custom_UI.Framework;
 
 namespace Custom_UI.Framework
 {

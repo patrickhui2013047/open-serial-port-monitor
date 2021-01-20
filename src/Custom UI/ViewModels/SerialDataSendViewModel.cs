@@ -1,11 +1,12 @@
 ﻿using Caliburn.Micro;
+using Custom_UI.Messages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using Whitestone.OpenSerialPortMonitor.Main.Messages;
+
 
 namespace Custom_UI.ViewModels
 {
@@ -127,7 +128,7 @@ namespace Custom_UI.ViewModels
                 data.AddRange(System.Text.Encoding.ASCII.GetBytes(parsed));
             }
 
-            _eventAggregator.PublishOnUIThread(new Whitestone.OpenSerialPortMonitor.Main.Messages.SerialPortSend() { Data = data.ToArray() });
+            _eventAggregator.PublishOnUIThread(new SerialPortSend() { Data = data.ToArray() });
         }
 
         public void Handle(SerialPortConnect message)
