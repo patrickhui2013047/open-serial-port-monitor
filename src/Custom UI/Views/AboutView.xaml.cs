@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Whitestone.OpenSerialPortMonitor.Main.Views
+namespace Custom_UI.Views
 {
     /// <summary>
     /// Interaction logic for AboutView.xaml

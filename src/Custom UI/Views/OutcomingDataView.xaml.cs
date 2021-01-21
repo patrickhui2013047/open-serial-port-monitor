@@ -21,14 +21,14 @@ namespace Custom_UI.Views
     /// <summary>
     /// Interaction logic for SerialDataView.xaml
     /// </summary>
-    public partial class SerialDataView : UserControl
+    public partial class OutcomingDataView : UserControl
     {
-        public SerialDataView()
+        public OutcomingDataView()
         {
             InitializeComponent();
 
             //DataViewParsed.TextChanged += TextChanged;
-            IncomingDataViewRaw.TextChanged += TextChanged;
+            DataViewRaw.TextChanged += TextChanged;
         }
 
         void TextChanged(object sender, TextChangedEventArgs e)

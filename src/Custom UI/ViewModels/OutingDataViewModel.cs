@@ -1,4 +1,4 @@
-﻿﻿using Caliburn.Micro;
+﻿using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,19 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
-using Whitestone.OpenSerialPortMonitor.Main.Messages;
+using Custom_UI.Messages;
 using Whitestone.OpenSerialPortMonitor.SerialCommunication;
 
-namespace Whitestone.OpenSerialPortMonitor.Main.ViewModels
+namespace Custom_UI.ViewModels
 {
-    public class SerialDataViewModel : PropertyChangedBase, IHandle<SerialPortConnect>, IHandle<SerialPortDisconnect>, IHandle<Autoscroll>, IHandle<SerialPortSend>
+    public class OutcomingDataViewModel : PropertyChangedBase, IHandle<SerialPortConnect>, IHandle<SerialPortDisconnect>, IHandle<Autoscroll>, IHandle<SerialPortSend>
     {
         private readonly IEventAggregator _eventAggregator;
         private SerialReader _serialReader;
         private Timer _cacheTimer;
         private int _rawDataCounter = 0;
 
-        public SerialDataViewModel(IEventAggregator eventAggregator)
+        public OutcomingDataViewModel(IEventAggregator eventAggregator)
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.Subscribe(this);

@@ -18,10 +18,35 @@
                     <RowDefinition Height="21" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Content="Received data" Background="#FF4d6082" Foreground="White" Padding="5,2,0,0"></Label>
+                <Border Grid.Row="0" Background="#FF4d6082" Margin="0,0,0,0" Padding="5,2,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Incoming" Grid.Column="0" Background="#FF4d6082" Foreground="White" Margin="0,0,0,0" Padding="5,2,0,0"></Label>
+                        <Button Content="Raw" Grid.Column="1" Background="#AA4d6082" Foreground="White" x:Name="IncomingRaw" IsEnabled="{Binding IsIncomingViewPretty}"></Button>
+                        <Button Content="Pretty" Grid.Column="2" Background="#AA4d6082" Foreground="White" x:Name="IncomingPretty" IsEnabled="{Binding IsIncomingRaw}"></Button>
+                    </Grid>
+                    
+                </Border>
 
-                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="ParsedDataScroller" Tag="{Binding IsAutoscroll}">
-                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="DataViewParsed" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="IncomingDataScrollerPretty" Tag="{Binding IsAutoscroll}" Visibility="Collapsed">
+                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="IncomingDataViewPretty" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
+                </ScrollViewer>
+
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="IncomingDataScroller" Tag="{Binding IsAutoscroll}" Visibility="Visible">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="5" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <TextBox Grid.Column="0" Background="#FFFFFFFF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5" x:Name="IncomingDataViewHex" IsReadOnly="True" IsUndoEnabled="False" Margin="0,0,0,0" FontFamily="Courier New" MinWidth="360"></TextBox>
+                        <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></GridSplitter>
+                        <TextBox Grid.Column="2" Background="#FFFFFFFF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5" x:Name="IncomingDataViewRaw" IsReadOnly="True" IsUndoEnabled="False" Margin="0,0,0,0" FontFamily="Courier New" MinWidth="130"></TextBox>
+                    </Grid>
                 </ScrollViewer>
             </Grid>
         </Border>
@@ -34,17 +59,34 @@
                     <RowDefinition Height="21" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Content="Raw data" Background="#FF4d6082" Foreground="White" Margin="0,0,0,0" Padding="5,2,0,0"></Label>
-                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="RawDataScroller" Tag="{Binding IsAutoscroll}">
+                <Border Grid.Row="0" Background="#FF4d6082" Margin="0,0,0,0" Padding="5,2,0,0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="40"/>
+                            <ColumnDefinition Width="40"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Outcoming" Grid.Column="0" Background="#FF4d6082" Foreground="White" Margin="0,0,0,0" Padding="5,2,0,0"></Label>
+                        <Button Content="Raw" Grid.Column="1" Background="#AA4d6082" Foreground="White" x:Name="OutcomingRaw" IsEnabled="False"></Button>
+                        <Button Content="Pretty" Grid.Column="2" Background="#AA4d6082" Foreground="White" x:Name="OutcomingPretty" IsEnabled="True"></Button>
+                    </Grid>
+
+                </Border>
+
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="OutcomingDataScrollerPretty" Tag="{Binding IsAutoscroll}" Visibility="Collapsed">
+                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="OutcomingDataViewPretty" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
+                </ScrollViewer>
+                
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="OutcomingDataScroller" Tag="{Binding IsAutoscroll}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="5" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <TextBox Grid.Column="0" Background="#FFFFFFFF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5" x:Name="DataViewHex" IsReadOnly="True" IsUndoEnabled="False" Margin="0,0,0,0" FontFamily="Courier New" MinWidth="360"></TextBox>
+                        <TextBox Grid.Column="0" Background="#FFFFFFFF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5" x:Name="OutcomingDataViewHex" IsReadOnly="True" IsUndoEnabled="False" Margin="0,0,0,0" FontFamily="Courier New" MinWidth="360"></TextBox>
                         <GridSplitter Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></GridSplitter>
-                        <TextBox Grid.Column="2" Background="#FFFFFFFF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5" x:Name="DataViewRaw" IsReadOnly="True" IsUndoEnabled="False" Margin="0,0,0,0" FontFamily="Courier New" MinWidth="130"></TextBox>
+                        <TextBox Grid.Column="2" Background="#FFFFFFFF" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Padding="5" x:Name="OutcomingDataViewRaw" IsReadOnly="True" IsUndoEnabled="False" Margin="0,0,0,0" FontFamily="Courier New" MinWidth="130"></TextBox>
                     </Grid>
                 </ScrollViewer>
             </Grid>

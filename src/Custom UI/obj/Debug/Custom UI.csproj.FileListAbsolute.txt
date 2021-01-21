@@ -34,3 +34,7 @@ D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.csproj.CopyC
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\App.baml
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataView.baml
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\IncomingDataView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\IncomingDataView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\OutcomingDataView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\OutcomingDataView.g.cs

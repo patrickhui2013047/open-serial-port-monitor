@@ -104,6 +104,8 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\SerialConnectorViewModel.cs" />
     <Compile Include="ViewModels\SerialDataSendViewModel.cs" />
+    <Compile Include="ViewModels\IncomingDataViewModel.cs" />
+    <Compile Include="ViewModels\OutingDataViewModel.cs" />
     <Compile Include="ViewModels\SerialDataViewModel.cs" />
     <Compile Include="Views\AboutView.xaml.cs">
       <DependentUpon>AboutView.xaml</DependentUpon>
@@ -113,6 +115,12 @@
     </Compile>
     <Compile Include="Views\SerialDataSendView.xaml.cs">
       <DependentUpon>SerialDataSendView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\IncomingDataView.xaml.cs">
+      <DependentUpon>IncomingDataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OutcomingDataView.xaml.cs">
+      <DependentUpon>OutcomingDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SerialDataView.xaml.cs">
       <DependentUpon>SerialDataView.xaml</DependentUpon>
@@ -138,6 +146,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\SerialDataSendView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\IncomingDataView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\OutcomingDataView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

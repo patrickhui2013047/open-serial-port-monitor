@@ -6,7 +6,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Custom_UI.ViewModels;
-//TODO:replace
 using Custom_UI.Framework;
 using Custom_UI.Messages;
 using System.Windows;
@@ -69,7 +68,7 @@ namespace Custom_UI.ViewModels
             _eventAggregator = eventAggregator;
             _windowManager = windowManager;
 
-            base.DisplayName = "Open Serial Port Monitor";// +Assembly.GetExecutingAssembly().GetName().Version;
+            base.DisplayName = "Serial Port Monitor";// +Assembly.GetExecutingAssembly().GetName().Version;
         }
 
         protected override void OnInitialize()

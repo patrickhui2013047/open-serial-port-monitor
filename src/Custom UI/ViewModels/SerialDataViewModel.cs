@@ -13,12 +13,15 @@ using Whitestone.OpenSerialPortMonitor.SerialCommunication;
 
 namespace Custom_UI.ViewModels
 {
+    //TODO:parsed data view
+
     public class SerialDataViewModel : PropertyChangedBase, IHandle<SerialPortConnect>, IHandle<SerialPortDisconnect>, IHandle<Autoscroll>, IHandle<SerialPortSend>
     {
         private readonly IEventAggregator _eventAggregator;
         private SerialReader _serialReader;
         private Timer _cacheTimer;
-        private int _rawDataCounter = 0;
+        private int _incomingRawDataCounter = 0;
+        private int _outcomingRawDataCounter = 0;
 
         public SerialDataViewModel(IEventAggregator eventAggregator)
         {
@@ -26,6 +29,50 @@ namespace Custom_UI.ViewModels
             _eventAggregator.Subscribe(this);
 
             _serialReader = new SerialReader();
+        }
+
+        private bool _isIncomingViewRaw = true;
+        public bool IsIncomingViewRaw
+        {
+            get { return _isIncomingViewRaw; }
+            set
+            {
+                _isIncomingViewRaw = value;
+                NotifyOfPropertyChange(() => IsIncomingViewRaw);
+                NotifyOfPropertyChange(() => IsIncomingViewPretty);
+            }
+        }
+        public bool IsIncomingViewPretty
+        {
+            get { return !_isIncomingViewRaw; }
+            set
+            {
+                _isIncomingViewRaw = !value;
+                NotifyOfPropertyChange(() => IsIncomingViewRaw);
+                NotifyOfPropertyChange(() => IsIncomingViewPretty);
+            }
+        }
+
+        private bool _isOutcomingViewRaw = true;
+        public bool IsOutcomingViewRaw
+        {
+            get { return _isOutcomingViewRaw; }
+            set
+            {
+                _isOutcomingViewRaw = value;
+                NotifyOfPropertyChange(() => IsOutcomingViewRaw);
+                NotifyOfPropertyChange(() => IsOutcomingViewPretty);
+            }
+        }
+        public bool IsOutcomingViewPretty
+        {
+            get { return !_isOutcomingViewRaw; }
+            set
+            {
+                _isOutcomingViewRaw = !value;
+                NotifyOfPropertyChange(() => IsOutcomingViewRaw);
+                NotifyOfPropertyChange(() => IsOutcomingViewPretty);
+            }
         }
 
         private bool _isAutoscroll = true;
@@ -38,41 +85,87 @@ namespace Custom_UI.ViewModels
                 NotifyOfPropertyChange(() => IsAutoscroll);
             }
         }
-
-        private StringBuilder _dataViewParsedBuilder = new StringBuilder();
-        private string _dataViewParsed = string.Empty;
-        public string DataViewParsed
+        
+        private StringBuilder _incomingDataViewParsedBuilder = new StringBuilder();
+        private string _incomingDataViewParsed = string.Empty;
+        public string IncomingDataViewParsed
         {
-            get { return _dataViewParsed; }
+            get { return _incomingDataViewParsed; }
             set
             {
-                _dataViewParsed = value;
-                NotifyOfPropertyChange(() => DataViewParsed);
+                _incomingDataViewParsed = value;
+                NotifyOfPropertyChange(() => IncomingDataViewParsed);
             }
         }
 
-        private StringBuilder _dataViewRawBuilder = new StringBuilder();
-        private string _dataViewRaw = string.Empty;
-        public string DataViewRaw
+        private StringBuilder _incomingDataViewRawBuilder = new StringBuilder();
+        private string _incomingDataViewRaw = string.Empty;
+        public string IncomingDataViewRaw
         {
-            get { return _dataViewRaw; }
+            get { return _incomingDataViewRaw; }
             set
             {
-                _dataViewRaw = value;
-                NotifyOfPropertyChange(() => DataViewRaw);
+                _incomingDataViewRaw = value;
+                NotifyOfPropertyChange(() => IncomingDataViewRaw);
             }
         }
 
-        private StringBuilder _dataViewHexBuilder = new StringBuilder();
-        private string _dataViewHex = string.Empty;
-        public string DataViewHex
+        private StringBuilder _incomingDataViewHexBuilder = new StringBuilder();
+        private string _incomingDataViewHex = string.Empty;
+        public string IncomingDataViewHex
         {
-            get { return _dataViewHex; }
+            get { return _incomingDataViewHex; }
             set
             {
-                _dataViewHex = value;
-                NotifyOfPropertyChange(() => DataViewHex);
+                _incomingDataViewHex = value;
+                NotifyOfPropertyChange(() => IncomingDataViewHex);
             }
+        }
+        
+        private StringBuilder _outcomingDataViewParsedBuilder = new StringBuilder();
+        private string _outcomingDataViewParsed = string.Empty;
+        public string OutcomingDataViewParsed
+        {
+            get { return _outcomingDataViewParsed; }
+            set
+            {
+                _outcomingDataViewParsed = value;
+                NotifyOfPropertyChange(() => OutcomingDataViewParsed);
+            }
+        }
+
+        private StringBuilder _outcomingDataViewRawBuilder = new StringBuilder();
+        private string _outcomingDataViewRaw = string.Empty;
+        public string OutcomingDataViewRaw
+        {
+            get { return _outcomingDataViewRaw; }
+            set
+            {
+                _outcomingDataViewRaw = value;
+                NotifyOfPropertyChange(() => OutcomingDataViewRaw);
+            }
+        }
+
+        private StringBuilder _outcomingDataViewHexBuilder = new StringBuilder();
+        private string _outcomingDataViewHex = string.Empty;
+        public string OutcomingDataViewHex
+        {
+            get { return _outcomingDataViewHex; }
+            set
+            {
+                _outcomingDataViewHex = value;
+                NotifyOfPropertyChange(() => OutcomingDataViewHex);
+            }
+        }
+
+        public void IncomingRaw()
+        {
+            IsIncomingViewRaw = true;
+        }
+
+        public void IncomingPretty()
+        {
+            IsIncomingViewRaw = false;
         }
 
         public void Handle(SerialPortConnect message)
@@ -102,18 +195,31 @@ namespace Custom_UI.ViewModels
 
         void _cacheTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            string dataParsed = _dataViewParsedBuilder.ToString();
-            _dataViewParsedBuilder = new StringBuilder();
+            string incomingDataParsed = _incomingDataViewParsedBuilder.ToString();
+            _incomingDataViewParsedBuilder = new StringBuilder();
 
-            string dataHex = _dataViewHexBuilder.ToString();
-            _dataViewHexBuilder = new StringBuilder();
+            string incomingDataHex = _incomingDataViewHexBuilder.ToString();
+            _incomingDataViewHexBuilder = new StringBuilder();
 
-            string dataRaw = _dataViewRawBuilder.ToString();
-            _dataViewRawBuilder = new StringBuilder();
+            string incomingDataRaw = _incomingDataViewRawBuilder.ToString();
+            _incomingDataViewRawBuilder = new StringBuilder();
 
-            DataViewParsed += dataParsed;
-            DataViewHex += dataHex;
-            DataViewRaw += dataRaw;
+            IncomingDataViewParsed += incomingDataParsed;
+            IncomingDataViewHex += incomingDataHex;
+            IncomingDataViewRaw += incomingDataRaw;
+
+            string outcomingDataParsed = _outcomingDataViewParsedBuilder.ToString();
+            _outcomingDataViewParsedBuilder = new StringBuilder();
+
+            string outcomingDataHex = _outcomingDataViewHexBuilder.ToString();
+            _outcomingDataViewHexBuilder = new StringBuilder();
+
+            string outcomingDataRaw = _outcomingDataViewRawBuilder.ToString();
+            _outcomingDataViewRawBuilder = new StringBuilder();
+
+            OutcomingDataViewParsed += outcomingDataParsed;
+            OutcomingDataViewHex += outcomingDataHex;
+            OutcomingDataViewRaw += outcomingDataRaw;
         }
 
         public void Handle(Autoscroll message)
@@ -123,11 +229,11 @@ namespace Custom_UI.ViewModels
 
         void SerialDataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            _dataViewParsedBuilder.Append(System.Text.Encoding.ASCII.GetString(e.Data));
+            _incomingDataViewParsedBuilder.Append(System.Text.Encoding.ASCII.GetString(e.Data));
 
             foreach (byte data in e.Data)
             {
-                _rawDataCounter = _rawDataCounter + 1;
+                _incomingRawDataCounter = _incomingRawDataCounter + 1;
 
                 char character = (char)data;
                 if (data <= 31 ||
@@ -136,14 +242,14 @@ namespace Custom_UI.ViewModels
                     character = '.';
                 }
 
-                _dataViewHexBuilder.Append(string.Format("{0:x2} ", data));
-                _dataViewRawBuilder.Append(character);
+                _incomingDataViewHexBuilder.Append(string.Format("{0:x2} ", data));
+                _incomingDataViewRawBuilder.Append(character);
 
-                if (_rawDataCounter > 0 && _rawDataCounter % 16 == 15)
+                if (_incomingRawDataCounter > 0 && _incomingRawDataCounter % 16 == 15)
                 {
-                    _dataViewHexBuilder.Append("\r\n");
-                    _dataViewRawBuilder.Append("\r\n");
-                    _rawDataCounter = 0;
+                    _incomingDataViewHexBuilder.Append("\r\n");
+                    _incomingDataViewRawBuilder.Append("\r\n");
+                    _incomingRawDataCounter = 0;
                 }
             }
         }
@@ -151,6 +257,31 @@ namespace Custom_UI.ViewModels
         public void Handle(SerialPortSend message)
         {
             _serialReader.Send(message.Data);
+
+            _outcomingDataViewParsedBuilder.Append(System.Text.Encoding.ASCII.GetString(message.Data));
+
+            foreach (byte data in message.Data)
+            {
+                _outcomingRawDataCounter = _outcomingRawDataCounter + 1;
+
+                char character = (char)data;
+                if (data <= 31 ||
+                    data == 127)
+                {
+                    character = '.';
+                }
+
+                _outcomingDataViewHexBuilder.Append(string.Format("{0:x2} ", data));
+                _outcomingDataViewRawBuilder.Append(character);
+
+                if (_outcomingRawDataCounter > 0 && _outcomingRawDataCounter % 16 == 15)
+                {
+                    _outcomingDataViewHexBuilder.Append("\r\n");
+                    _outcomingDataViewRawBuilder.Append("\r\n");
+                    _outcomingRawDataCounter = 0;
+                }
+            }
+
         }
     }
 }
