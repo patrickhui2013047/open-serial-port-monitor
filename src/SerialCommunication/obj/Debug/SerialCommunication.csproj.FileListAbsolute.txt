@@ -21,3 +21,10 @@ D:\repos\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommun
 D:\repos\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.csproj.CopyComplete
 D:\repos\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.dll
 D:\repos\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.pdb
+D:\D\open-serial-port-monitor\src\SerialCommunication\bin\Debug\SerialCommunication.dll
+D:\D\open-serial-port-monitor\src\SerialCommunication\bin\Debug\SerialCommunication.pdb
+D:\D\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.csprojAssemblyReference.cache
+D:\D\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.csproj.CoreCompileInputs.cache
+D:\D\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.csproj.CopyComplete
+D:\D\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.dll
+D:\D\open-serial-port-monitor\src\SerialCommunication\obj\Debug\SerialCommunication.pdb
