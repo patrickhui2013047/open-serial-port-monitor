@@ -9,5 +9,6 @@
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
+    <HasHotReloadOverlayBeenDismissed>true</HasHotReloadOverlayBeenDismissed>
   </PropertyGroup>
 </Project>

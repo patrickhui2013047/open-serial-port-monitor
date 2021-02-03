@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Command1",
+    "Command": "1 {0}",
+    "Key": [1]
+  },
+  {
+    "Name": "Command2",
+    "Command": "2 {0}",
+    "Key": [2]
+  },
+  {
+    "Name": "Command3",
+    "Command": "3 {0}",
+    "Key": [3]
+  }
+]

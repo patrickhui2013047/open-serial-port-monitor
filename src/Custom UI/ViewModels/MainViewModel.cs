@@ -62,6 +62,20 @@ namespace Custom_UI.ViewModels
             }
         }
 
+        private SerialCommandViewModel _serialCommandView;
+        public SerialCommandViewModel SerialCommandView
+        {
+            get
+            {
+                return _serialCommandView;
+            }
+            set
+            {
+                _serialCommandView = value;
+                NotifyOfPropertyChange(() => SerialCommandView);
+            }
+        }
+
         [ImportingConstructor]
         public MainViewModel(IEventAggregator eventAggregator, IWindowManager windowManager)
         {
@@ -76,6 +90,7 @@ namespace Custom_UI.ViewModels
             SerialConnectorView = new SerialConnectorViewModel(_eventAggregator);
             SerialDataView = new SerialDataViewModel(_eventAggregator);
             SerialDataSendView = new SerialDataSendViewModel(_eventAggregator);
+            SerialCommandView = new SerialCommandViewModel(_eventAggregator,_windowManager);
             base.OnInitialize();
         }
 

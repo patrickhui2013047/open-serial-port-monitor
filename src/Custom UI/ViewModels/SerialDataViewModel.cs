@@ -167,7 +167,15 @@ namespace Custom_UI.ViewModels
         {
             IsIncomingViewRaw = false;
         }
+        public void OutcomingRaw()
+        {
+            IsOutcomingViewRaw = true;
+        }
 
+        public void OutcomingPretty()
+        {
+            IsOutcomingViewRaw = false;
+        }
         public void Handle(SerialPortConnect message)
         {
             try

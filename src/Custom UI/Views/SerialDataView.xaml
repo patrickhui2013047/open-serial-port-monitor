@@ -5,6 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="520">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"></BooleanToVisibilityConverter>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -27,16 +30,16 @@
                         </Grid.ColumnDefinitions>
                         <Label Content="Incoming" Grid.Column="0" Background="#FF4d6082" Foreground="White" Margin="0,0,0,0" Padding="5,2,0,0"></Label>
                         <Button Content="Raw" Grid.Column="1" Background="#AA4d6082" Foreground="White" x:Name="IncomingRaw" IsEnabled="{Binding IsIncomingViewPretty}"></Button>
-                        <Button Content="Pretty" Grid.Column="2" Background="#AA4d6082" Foreground="White" x:Name="IncomingPretty" IsEnabled="{Binding IsIncomingRaw}"></Button>
+                        <Button Content="Pretty" Grid.Column="2" Background="#AA4d6082" Foreground="White" x:Name="IncomingPretty" IsEnabled="{Binding IsIncomingViewRaw}"></Button>
                     </Grid>
                     
                 </Border>
 
-                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="IncomingDataScrollerPretty" Tag="{Binding IsAutoscroll}" Visibility="Collapsed">
-                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="IncomingDataViewPretty" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="IncomingDataScrollerPretty" Tag="{Binding IsAutoscroll}" Visibility="{Binding IsIncomingViewPretty, Converter={StaticResource booleanToVisibilityConverter}}">
+                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="IncomingDataViewParsed" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
                 </ScrollViewer>
 
-                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="IncomingDataScroller" Tag="{Binding IsAutoscroll}" Visibility="Visible">
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="IncomingDataScroller" Tag="{Binding IsAutoscroll}" Visibility="{Binding IsIncomingViewRaw, Converter={StaticResource booleanToVisibilityConverter}}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
@@ -67,17 +70,17 @@
                             <ColumnDefinition Width="40"/>
                         </Grid.ColumnDefinitions>
                         <Label Content="Outcoming" Grid.Column="0" Background="#FF4d6082" Foreground="White" Margin="0,0,0,0" Padding="5,2,0,0"></Label>
-                        <Button Content="Raw" Grid.Column="1" Background="#AA4d6082" Foreground="White" x:Name="OutcomingRaw" IsEnabled="False"></Button>
-                        <Button Content="Pretty" Grid.Column="2" Background="#AA4d6082" Foreground="White" x:Name="OutcomingPretty" IsEnabled="True"></Button>
+                        <Button Content="Raw" Grid.Column="1" Background="#AA4d6082" Foreground="White" x:Name="OutcomingRaw" IsEnabled="{Binding IsOutcomingViewPretty}"></Button>
+                        <Button Content="Pretty" Grid.Column="2" Background="#AA4d6082" Foreground="White" x:Name="OutcomingPretty" IsEnabled="{Binding IsOutcomingViewRaw}"></Button>
                     </Grid>
 
                 </Border>
 
-                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="OutcomingDataScrollerPretty" Tag="{Binding IsAutoscroll}" Visibility="Collapsed">
-                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="OutcomingDataViewPretty" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="OutcomingDataScrollerPretty" Tag="{Binding IsAutoscroll}" Visibility="{Binding IsOutcomingViewPretty, Converter={StaticResource booleanToVisibilityConverter}}">
+                    <TextBox Background="#FFFFFFFF" VerticalAlignment="Stretch" Padding="5" x:Name="OutcomingDataViewParsed" IsReadOnly="True" IsUndoEnabled="False" TextWrapping="Wrap" FontFamily="Courier New" ></TextBox>
                 </ScrollViewer>
-                
-                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="OutcomingDataScroller" Tag="{Binding IsAutoscroll}">
+
+                <ScrollViewer Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Visible" x:Name="OutcomingDataScroller" Tag="{Binding IsAutoscroll}" Visibility="{Binding IsOutcomingViewRaw, Converter={StaticResource booleanToVisibilityConverter}}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />

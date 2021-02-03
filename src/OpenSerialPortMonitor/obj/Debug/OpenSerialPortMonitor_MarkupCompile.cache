@@ -12,9 +12,9 @@ DEBUG;TRACE
 D:\D\open-serial-port-monitor\src\OpenSerialPortMonitor\App.xaml
 5231517310
 
-221356173892
+231908560089
 69439796320
 Views\AboutView.xaml;Views\MainView.xaml;Views\SerialConnectorView.xaml;Views\SerialDataSendView.xaml;Views\SerialDataView.xaml;
 
-False
+True
 

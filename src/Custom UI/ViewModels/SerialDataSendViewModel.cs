@@ -8,11 +8,14 @@ using System.Threading.Tasks;
 using System.Windows;
 
 
+
 namespace Custom_UI.ViewModels
 {
     public class SerialDataSendViewModel : PropertyChangedBase, IHandle<SerialPortConnect>, IHandle<SerialPortDisconnect>, IHandle<ConnectionError>
     {
         private readonly IEventAggregator _eventAggregator;
+
+        //private Class1 class1;
 
         private string _dataToSend = string.Empty;
         public string DataToSend
