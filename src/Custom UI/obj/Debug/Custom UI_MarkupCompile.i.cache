@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\D\open-serial-port-monitor\src\Custom UI\obj\Debug\
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\
 Custom_UI
 none
 false
 DEBUG;TRACE
-D:\D\open-serial-port-monitor\src\Custom UI\App.xaml
+D:\repos\open-serial-port-monitor\src\Custom UI\App.xaml
 7-4838135
 
 30-95193021
-85-1542434466
+851722951136
 Views\SerialCommandDetailView.xaml;Views\AboutView.xaml;Views\MainView.xaml;Views\SerialCommandView.xaml;Views\SerialConnectorView.xaml;Views\SerialDataSendView.xaml;Views\SerialDataView.xaml;
 
-False
+True
 

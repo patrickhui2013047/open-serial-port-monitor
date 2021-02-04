@@ -1,45 +1,71 @@
 ﻿using Custom_UI.Framework;
 using System;
 using System.Windows.Input;
+using Newtonsoft.Json;
 
 namespace Custom_UI.External
 {
+    [JsonObject]
     public class SerialCommand
     {
+        [JsonProperty]
         public string Name { get; set; }
-        public string Description { get; set; }
-
-        public string CommandPatten = string.Empty;
+        [JsonIgnore]
+        private string _description = string.Empty;
+        [JsonProperty]
+        public string Description 
+        {
+            get { return _description; }
+            set { _description = value; }
+        }
+        [JsonIgnore]
+        private string _commandPatten = string.Empty;
+        [JsonProperty]
+        public string CommandPatten 
+        {
+            get { return _commandPatten; }
+            set { _commandPatten = value; }
+        }
+        [JsonIgnore]
         public string Command
         {
             get
             {
-                if (Key.Length > 0 || Key == null)
+                if (Key != null && Key.Length > 0)
                 {
                     return string.Format(CommandPatten, _key);
                 }
-                else
+                else if( CommandPatten!=null)
                 {
                     return CommandPatten;
                 }
+                else
+                {
+                    return string.Empty;
+                }
 
-            }
-            set
-            {
-                CommandPatten = value;
             }
         }
-
+        [JsonIgnore]
         private object[] _key;
+        [JsonProperty]
         public object[] Key
         {
-            get { return _key; }
+            get
+            {
+                return _key; 
+            }
             set { _key = value; }
         }
-
+        [JsonProperty]
         public bool IsHex { get; set; }
+        [JsonIgnore]
+        public int ID { get; set; }
 
+        //The following code is not for data storage, Don't change anything
+        [JsonIgnore]
         private Func<SerialCommand, bool> _sendHandler;
+
         public void ApplySendEvent(Func<SerialCommand,bool> handler)
         {
             _sendHandler = handler;
@@ -49,7 +75,9 @@ namespace Custom_UI.External
         {
             if (_sendHandler != null) { _sendHandler.Invoke(this); }
         }
+        [JsonIgnore]
         private ICommand _send;
+        [JsonIgnore]
         public ICommand Send
         {
             get
@@ -61,8 +89,9 @@ namespace Custom_UI.External
                 return _send;
             }
         }
-
+        [JsonIgnore]
         private Func<SerialCommand, bool> _editHandler;
+
         public void ApplyEditEvent(Func<SerialCommand, bool> handler)
         {
             _editHandler = handler;
@@ -73,8 +102,9 @@ namespace Custom_UI.External
             if (_editHandler != null) { _editHandler.Invoke(this); }
         }
 
-
+        [JsonIgnore]
         private ICommand _edit;
+        [JsonIgnore]
         public ICommand Edit
         {
             get

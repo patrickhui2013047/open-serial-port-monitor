@@ -1,17 +1,23 @@
 [
   {
     "Name": "Command1",
-    "Command": "1 {0}",
-    "Key": [1]
+	"Description":"",
+    "CommandPatten": "1 {0}",
+    "Key": [1],
+	"IsHex": false
   },
   {
     "Name": "Command2",
-    "Command": "2 {0}",
-    "Key": [2]
+	"Description":"",
+    "CommandPatten": "2 {0}",
+    "Key": [2],
+	"IsHex": false
   },
   {
     "Name": "Command3",
-    "Command": "3 {0}",
-    "Key": [3]
+	"Description":"",
+    "CommandPatten": "3 {0}",
+    "Key": [3],
+	"IsHex": false
   }
 ]

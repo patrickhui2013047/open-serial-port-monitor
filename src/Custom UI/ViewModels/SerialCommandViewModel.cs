@@ -110,8 +110,8 @@ namespace Custom_UI.ViewModels
             set
             {
                 _filter = value;
-                NotifyOfPropertyChange(() => Filter);
-                NotifyOfPropertyChange(() => CommandListSource);
+                //NotifyOfPropertyChange(() => Filter);//
+                NotifyOfPropertyChange(() => CommandListFilterd);
             }
         }
 
@@ -120,23 +120,40 @@ namespace Custom_UI.ViewModels
         {
             get 
             {
-                if (string.IsNullOrEmpty(Filter) || string.IsNullOrWhiteSpace(Filter))
-                {
-                    return _commandListSource;
-                }
-                return _commandListSource.Where(obj => obj.Name.ToLower().StartsWith(Filter)|| obj.Command.ToLower().StartsWith(Filter)).ToList();
+                _commandListSource.ForEach(obj => obj.ApplySendEvent(SendButtonHandle));
+                _commandListSource.ForEach(obj => obj.ApplyEditEvent(EditButtonHandle));
+                _commandListSource.ForEach(obj => obj.ID = _commandListSource.IndexOf(obj));
+                return _commandListSource;
             }
             set
             {
                 _commandListSource = value;
                 _commandListSource.ForEach(obj => obj.ApplySendEvent(SendButtonHandle));
                 _commandListSource.ForEach(obj => obj.ApplyEditEvent(EditButtonHandle));
-                NotifyOfPropertyChange(() => CommandListSource);
+                _commandListSource.ForEach(obj => obj.ID=_commandListSource.IndexOf(obj));
                 NotifyOfPropertyChange(() => IsConnected);
-                NotifyOfPropertyChange(() => IsValidData);
             }
         }
-
+        public List<SerialCommand> CommandListFilterd
+        {
+            get
+            {
+                
+                if (string.IsNullOrEmpty(Filter) || string.IsNullOrWhiteSpace(Filter))
+                {
+                    return CommandListSource;
+                }
+                return CommandListSource.Where(obj => obj.Name.ToLower().StartsWith(Filter) || obj.Command.ToLower().StartsWith(Filter)).ToList();
+            }
+            
+        }
+        public int CommandCount
+        {
+            get
+            {
+                return CommandListSource.Count;
+            }
+        }
 
 
         public SerialCommandViewModel(IEventAggregator eventAggregator, IWindowManager windowManager)
@@ -222,17 +239,26 @@ namespace Custom_UI.ViewModels
             switch (message.Operation)
             {
                 case SerialCommandOperation.Create:
+                    CommandListSource.Add(message.Command);
                     break;
                 case SerialCommandOperation.Remove:
+                    CommandListSource.Remove(message.Command);
                     break;
                 case SerialCommandOperation.Update:
+                    CommandListSource[message.Command.ID] = message.Command;
                     break;
                 case SerialCommandOperation.Send:
+                    SendButtonHandle(message.Command);
                     break;
-                default:
+                default://This is no need to add but for in case
 
                     break;
             }
+            //NotifyOfPropertyChange(() => CommandListSource);
+           
         }
+
+        
     }
+
 }

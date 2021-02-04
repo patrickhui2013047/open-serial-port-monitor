@@ -21,16 +21,16 @@
                 <RowDefinition/>
                 <RowDefinition Height="25"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0"  Content="Serial port connection" Background="#FF4d6082" Foreground="White" Margin="-5,-3,-5,2" Padding="5,2,0,0" Grid.ColumnSpan="2"></Label>
+            <Label Grid.Row="0"  Content="Serial command list" Background="#FF4d6082" Foreground="White" Margin="-5,-3,-5,2" Padding="5,2,0,0" Grid.ColumnSpan="2"></Label>
             <Border Grid.Row="1" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
                 <TextBox Grid.Row="1" Background="#FFFFFFFF" Padding="1" x:Name="SearchBar" IsUndoEnabled="True" TextWrapping="NoWrap" FontFamily="Courier New" VerticalAlignment="Top" Margin="0" Text="{Binding Filter,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
             </Border>
             <Border Grid.Row="2" BorderBrush="Black" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
-                <ListView x:Name="CommandList" ItemsSource="{Binding CommandListSource}" Grid.Row="2" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListView x:Name="CommandList" ItemsSource="{Binding CommandListFilterd, UpdateSourceTrigger=PropertyChanged, BindsDirectlyToSource=True}" Grid.Row="2" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Visible">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Border BorderBrush="Black" BorderThickness="0.6">
-                                <Grid MinWidth="180">
+                            <Border BorderBrush="Black" BorderThickness=".4"  HorizontalAlignment="Stretch">
+                                <Grid MaxWidth="175">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="35"/>

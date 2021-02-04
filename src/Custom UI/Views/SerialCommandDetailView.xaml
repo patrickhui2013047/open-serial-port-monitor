@@ -14,7 +14,7 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Content="{Binding Name}" Background="#FF4d6082" Foreground="White" Margin="-5,-5,-5,2" Padding="5,3,0,0" Grid.ColumnSpan="2"></Label>
+            <Label Grid.Row="0" Content="{Binding Name}" Background="#FF4d6082" Foreground="White" Margin="-6,-6,-6,2" Padding="5,3,0,0" Grid.ColumnSpan="2"></Label>
             <Border Grid.Row="1" BorderBrush="#FF8e9bbc">
                 <Grid>
                     <Grid.RowDefinitions>

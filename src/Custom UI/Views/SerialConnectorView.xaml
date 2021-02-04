@@ -10,7 +10,7 @@
     </UserControl.Resources>
     <Border BorderBrush="#FF8e9bbc" BorderThickness="1,1,1,1" Padding="5, 3, 5, 5" Background="#FFcfd6e5" RenderOptions.EdgeMode="Aliased">
 
-        <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -43,7 +43,7 @@
             </ComboBox>
 
             <Label Grid.Row="5" Grid.Column="0" Content="Stop bits:"></Label>
-            <ComboBox Grid.Row="5" Grid.Column="1" x:Name="StopBits" IsEnabled="{Binding IsDisconnected}" SelectedItem="{Binding SelectedStopBits}" VerticalAlignment="Center" Width="100">
+            <ComboBox Grid.Row="5" Grid.Column="1" x:Name="StopBits" IsEnabled="{Binding IsDisconnected}" SelectedItem="{Binding SelectedStopBits}" VerticalAlignment="Center">
             </ComboBox>
 
             <Button Grid.Row="6" Grid.ColumnSpan="2" Content="Connect" x:Name="Connect" Visibility="{Binding IsDisconnected, Converter={StaticResource booleanToVisibilityConverter}}" Height="30" Margin="0,5,0,0"></Button>

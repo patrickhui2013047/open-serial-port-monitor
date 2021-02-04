@@ -51,12 +51,23 @@ namespace Custom_UI.ViewModels
         {
             get 
             {
-                string[] formated = new string[Command.Key.Length];
-                for(int i = 0; i < Command.Key.Length; i++)
+                try
                 {
-                    formated[i] = Command.Key[i].ToString();
+                    if (Key != null)
+                    {
+                        string[] formated = new string[Command.Key.Length];
+                        for (int i = 0; i < Command.Key.Length; i++)
+                        {
+                            formated[i] = Command.Key[i].ToString();
+                        }
+                        return string.Join("\n", formated);
+                    }
+                    return "";
                 }
-                return string.Join("\n", formated);
+                catch (NullReferenceException)
+                {
+                    return "";
+                }
             }
             set { Command.Key = value.Split('\n'); }
         }
@@ -96,7 +107,7 @@ namespace Custom_UI.ViewModels
         public void Send()
         {
             _eventAggregator.BeginPublishOnUIThread(new SerialCommandUpdate() { Command = Command,Operation=SerialCommandOperation.Send });
-            Close();
+            
         }
         public void Save()
         {

@@ -25,7 +25,6 @@ D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\SerialCommunication.pd
 D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.xml
 D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.xml
 D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Microsoft.Expression.Interactions.xml
-D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Windows.Interactivity.xml
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataSendView.g.cs
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\GeneratedInternalTypeHelper.g.cs
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI_MarkupCompile.lref
@@ -34,10 +33,6 @@ D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.csproj.CopyC
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\App.baml
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataView.baml
 D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialDataView.g.cs
-D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\IncomingDataView.baml
-D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\IncomingDataView.g.cs
-D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\OutcomingDataView.baml
-D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\OutcomingDataView.g.cs
 D:\D\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.exe
 D:\D\open-serial-port-monitor\src\Custom UI\obj\Debug\Custom UI.pdb
 D:\D\open-serial-port-monitor\src\Custom UI\bin\Debug\Custom UI.exe.config
@@ -99,3 +94,29 @@ D:\D\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.Co
 D:\D\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.Core.xml
 D:\D\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialCommandDetailView.baml
 D:\D\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialCommandDetailView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.Core.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Newtonsoft.Json.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Buffers.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Memory.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Numerics.Vectors.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Text.Encodings.Web.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Text.Json.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.ValueTuple.dll
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Caliburn.Micro.Platform.Core.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\Newtonsoft.Json.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Buffers.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Memory.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Numerics.Vectors.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Text.Encodings.Web.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Text.Json.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\bin\Debug\System.ValueTuple.xml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialCommandDetailView.baml
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialCommandDetailView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialCommandView.g.cs
+D:\repos\open-serial-port-monitor\src\Custom UI\obj\Debug\Views\SerialCommandView.baml

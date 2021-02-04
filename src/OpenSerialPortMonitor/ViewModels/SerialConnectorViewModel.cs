@@ -13,6 +13,9 @@ namespace Whitestone.OpenSerialPortMonitor.Main.ViewModels
 {
     public class SerialConnectorViewModel : PropertyChangedBase, IHandle<ConnectionError>
     {
+
+        //TODO:Fix null connector error message
+        //TODO:Hot Update of connecterlists
         private readonly IEventAggregator _eventAggregator;
         
         public BindableCollection<string> ComPorts { get; set; }
