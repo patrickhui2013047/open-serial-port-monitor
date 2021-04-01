@@ -12,9 +12,9 @@ DEBUG;TRACE
 D:\repos\open-serial-port-monitor\src\Custom UI\App.xaml
 7-4838135
 
-29-1444801934
+30-95193021
 851722951136
 Views\SerialCommandDetailView.xaml;Views\AboutView.xaml;Views\MainView.xaml;Views\SerialCommandView.xaml;Views\SerialConnectorView.xaml;Views\SerialDataSendView.xaml;Views\SerialDataView.xaml;
 
-False
+True
 
